@@ -1,0 +1,31 @@
+//compare two JSON have the same properties without order
+
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+console.log(JSON.stringify(obj1) === JSON.stringify(obj2))
+
+------------------------------------------------------------------------
+
+
+//  Use the same rest countries and print all countries name, region, sub region and population
+
+
+var currency = new XMLHttpRequest();
+currency.open ('GET','http://api.countrylayer.com/v2/all?access_key=cf6ffcec185cae824f9d5d32c3e06be4') ;
+currency.send();
+currency.onload = function() {
+    console.log(JSON.parse(this.response));
+}
+
+------------------------------------------------------------------------
+
+//  display all the country flags in console
+
+
+var currency = new XMLHttpRequest();
+currency.open ('GET','http://api.countrylayer.com/v2/flag?access_key=cf6ffcec185cae824f9d5d32c3e06be4') ;
+currency.send();
+currency.onload = function() {
+    console.log(JSON.parse(this.response));
+}
